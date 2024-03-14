@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ntfy"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Irate-Walrus <71628949+Irate-Walrus@users.noreply.github.com>"]
 readme = "README.md"

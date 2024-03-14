@@ -18,7 +18,7 @@ Options:
 
 1. Clone the repository.
 2. Build the application: `poetry build`
-3. Install the application: `pipx install dist/ntfy-0.1.0.tar.gz`
+3. Install the application: `pipx install dist/ntfy-*.tar.gz`
 4. Create a config directory:
      - Linux: `~/.config/ntfy'
      - Windows `~/AppData/Roaming/ntfy`
@@ -26,8 +26,11 @@ Options:
 
 ```toml
 [telegram]
-api_id = YOUR-API-ID
-api_hash = YOUR-API-HASH
-channel_id = YOUR-PRIVATE-CHANNEL-ID
+api_id = 000000000
+api_hash = "YOUR-API-HASH"
+channel_id = -10000000
+bot_token= "YOUR-BOT-TOKEN"
 ```
 6. Execute `ntfy` and register session.
+
+> See how to create a Telegram Bot here: https://core.telegram.org/bots/features#creating-a-new-bot
