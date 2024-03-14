@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "ntfy"
+version = "0.1.0"
+description = ""
+authors = ["Irate-Walrus <71628949+Irate-Walrus@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+telethon = "^1.34.0"
+click = "^8.1.7"
+tomli = "^2.0.1"
+
+[tool.poetry.scripts]
+ntfy = "ntfy:cli.notify"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
