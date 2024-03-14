@@ -22,7 +22,14 @@ with open(CONFIG_FILE, 'rb') as fp:
 
 def get_text(ctx, param, value):
     if not value and not click.get_text_stream('stdin').isatty():
-        return click.get_text_stream('stdin').read().strip()
+        stream = click.get_text_stream('stdin')
+
+        text = ""
+        for line in stream:
+            print(line.strip())
+            text += line
+
+        return text.strip()
     else:
         return value
 
