@@ -18,7 +18,7 @@ Options:
 
 1. Clone the repository.
 2. Build the application: `poetry build`
-3. Install the application: `pipx install dist/ntfy-*.tar.gz`
+3. Install the application: `pipx install dist/ntfy-0.1.3.tar.gz`
 4. Create a config directory:
      - Linux: `~/.config/ntfy'
      - Windows `~/AppData/Roaming/ntfy`
