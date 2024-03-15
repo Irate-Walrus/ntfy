@@ -21,15 +21,16 @@ with open(CONFIG_FILE, 'rb') as fp:
     config = tomli.load(fp)
 
 def get_text(ctx, param, value):
-    if not value and not click.get_text_stream('stdin').isatty():
+    stdin_text = ""
+    if not click.get_text_stream('stdin').isatty():
         stream = click.get_text_stream('stdin')
 
-        text = ""
         for line in stream:
             print(line.strip())
-            text += line
+            stdin_text += line
 
-        return text.strip()
+    if not value and stdin_text:
+        return stdin_text.strip()
     else:
         return value
 
